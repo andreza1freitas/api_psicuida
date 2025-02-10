@@ -1,4 +1,4 @@
-package com.api_psicuida.api_psicuida;
+package br.com.psicuida;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
