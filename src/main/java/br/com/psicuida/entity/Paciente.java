@@ -66,7 +66,9 @@ public class Paciente {
 
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<AgendamentoSessao> agendamentos;
+    
+    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Pergunta> perguntas;
 
-     
     
 }
