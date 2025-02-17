@@ -6,6 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface AvaliacaoRepository extends JpaRepository<Avaliacao, Long>{
 	
     // Método para buscar avaliação pelo pacienteId
-    Avaliacao findByPacienteId(Long pacienteId);
-	
+	Avaliacao findByPaciente_Id(Long pacienteId);	
 }

@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "avaliacoes")
+@Table(name = "avaliacao")
 public class Avaliacao {
 
 	@Id
@@ -17,8 +17,9 @@ public class Avaliacao {
     private int nota; 
 
     @Column(length = 500)
-    private String comentario; // Comentário opcional
-
-    @Column(nullable = false)
-    private Long pacienteId; 
+    private String comentario;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "paciente_id")
+    private Paciente paciente;
 }
