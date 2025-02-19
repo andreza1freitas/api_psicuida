@@ -60,6 +60,10 @@ public class Paciente {
     @Enumerated(EnumType.STRING) 
     @Column(length = 10) 
     private Situacao situacao;
+    
+    private String socialId; 
+    
+    private String socialProvider; 
 
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Diario> diarios;

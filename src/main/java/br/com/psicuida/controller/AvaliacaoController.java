@@ -21,7 +21,7 @@ public class AvaliacaoController {
     }
 
     // Endpoint para criar ou atualizar avaliação
-    @PostMapping
+    @PutMapping
     public ResponseEntity<Avaliacao> criarOuAtualizarAvaliacao(@RequestBody Avaliacao avaliacao) {
         if (avaliacao.getPaciente() == null || avaliacao.getPaciente().getId() == null) {
             return ResponseEntity.badRequest().body(null);
